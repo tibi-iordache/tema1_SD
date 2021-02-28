@@ -1,0 +1,23 @@
+==7257== Conditional jump or move depends on uninitialised value(s)
+==7257==    at 0x109315: robot_remove_wearhouse_package (WearhouseManager.c:258)
+==7257==    by 0x10971B: robot_load_packages (WearhouseManager.c:421)
+==7257==    by 0x10B278: robot_swarm_collect (WearhouseManager.c:1532)
+==7257==    by 0x10B54B: main (app.c:42)
+==7257==  Uninitialised value was created by a heap allocation
+==7257==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==7257==    by 0x108D21: create_wearhouse (WearhouseManager.c:80)
+==7257==    by 0x108E37: open_wearhouse (WearhouseManager.c:109)
+==7257==    by 0x10B44F: main (app.c:21)
+==7257== 
+==7257== 1,239 (128 direct, 1,111 indirect) bytes in 4 blocks are definitely lost in loss record 16 of 21
+==7257==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==7257==    by 0x1091C0: create_robot (WearhouseManager.c:208)
+==7257==    by 0x10A2A9: open_parckinglot (WearhouseManager.c:850)
+==7257==    by 0x10B462: main (app.c:22)
+==7257== 
+==7257== 8,701 (648 direct, 8,053 indirect) bytes in 9 blocks are definitely lost in loss record 21 of 21
+==7257==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==7257==    by 0x109BF2: create_truck (WearhouseManager.c:618)
+==7257==    by 0x10A239: open_parckinglot (WearhouseManager.c:839)
+==7257==    by 0x10B462: main (app.c:22)
+==7257== 
